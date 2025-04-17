@@ -12,7 +12,9 @@ const breakTimeInput = document.getElementById('break-time');
 const modeToggleButton = document.getElementById('mode-toggle');
 
 function updateDisplay(minutes, seconds) {
-    timerDisplay.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    const timeString = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    timerDisplay.textContent = timeString;
+    document.title = `${timeString} - Pomodoro Timer`;
 }
 
 function startTimer() {

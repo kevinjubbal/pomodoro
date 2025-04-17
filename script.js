@@ -75,8 +75,14 @@ function toggleTimer() {
 
 function toggleMode() {
     isWorkTime = !isWorkTime;
-    modeToggleButton.textContent = isWorkTime ? 'Switch to Break' : 'Switch to Work';
-    modeToggleButton.className = isWorkTime ? 'work-mode' : 'break-mode';
+    const icon = modeToggleButton.querySelector('i');
+    if (isWorkTime) {
+        icon.className = 'fas fa-running';
+        modeToggleButton.className = 'mode-icon work-mode';
+    } else {
+        icon.className = 'fas fa-bed';
+        modeToggleButton.className = 'mode-icon break-mode';
+    }
     timeLeft = isWorkTime ? parseInt(workTimeInput.value) * 60 : parseInt(breakTimeInput.value) * 60;
     updateDisplay(Math.floor(timeLeft / 60), timeLeft % 60);
 }

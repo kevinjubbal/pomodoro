@@ -5,10 +5,10 @@
 }
 
 :root {
-    --primary-color: #fa6a04;
-    --primary-hover: #479c20;
-    --secondary-color: #f43f5e;
-    --secondary-hover: #e11d48;
+    --primary-color: #3b82f6;
+    --primary-hover: #2563eb;
+    --secondary-color: #64748b;
+    --secondary-hover: #475569;
     --background-color: #f8fafc;
     --card-background: #ffffff;
     --text-primary: #1e293b;
@@ -35,6 +35,7 @@ body {
     max-width: 500px;
     width: 90%;
     transition: transform 0.3s ease;
+    position: relative;
 }
 
 .container:hover {
@@ -77,12 +78,12 @@ button {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-#start {
+#toggle-timer {
     background-color: var(--primary-color);
     color: white;
 }
 
-#start:hover {
+#toggle-timer:hover {
     background-color: var(--primary-hover);
     transform: translateY(-1px);
 }
@@ -171,4 +172,37 @@ input[type="number"]::-webkit-outer-spin-button {
 
 input[type="number"] {
     -moz-appearance: textfield;
+}
+
+.mode-toggle-container {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+}
+
+.mode-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    padding: 0;
+    transition: all 0.2s ease;
+}
+
+.mode-icon.work-mode {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.mode-icon.break-mode {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.mode-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 } 

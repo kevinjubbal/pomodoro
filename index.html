@@ -4,14 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
+        <div class="mode-toggle-container">
+            <button id="mode-toggle" class="mode-icon">
+                <i class="fas fa-running"></i>
+            </button>
+        </div>
         <h1>Pomodoro Timer</h1>
         <div class="timer">
             <div class="timer-display" id="timer">25:00</div>
-            <button id="mode-toggle">Switch to Break</button>
             <div class="timer-controls">
                 <button id="toggle-timer">Start</button>
                 <button id="reset">Reset</button>
